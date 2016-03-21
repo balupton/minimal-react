@@ -8,7 +8,6 @@
   "badges": {
     "list": [
       "travisci",
-      "npmversion",
       "npmdownloads",
       "daviddm",
       "daviddmdev",
