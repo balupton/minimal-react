@@ -1,22 +1,36 @@
-# Build
-build/app.js
-build/style.css
+# 2016 March 21
+# https://github.com/bevry/base
 
-# Logs
-logs
-*.log
+# Temp Files
+**/.docpad.db
+**/out.*
+**/*.log
+**/*.cpuprofile
+**/*.heapsnapshot
 
-# Coverage directory used by tools like nyc
-.nyc_output
-coverage
+# Build Files
+build/
+components/
+bower_components/
+node_modules/
+out/
+*output/
+coffeejs/
+coffee/
+es5/
+es2015/
+esnext/
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+# Editor Caches
+.c9/
 
-# Dependency directory
-node_modules
-
-# Users Environment Variables
-.lock-wscript
-
+# Private Files
+.env
 .idea
+.cake_task_cache
+
+
+# =====================================
+# CUSTOM
+
+# None

@@ -1,108 +1,76 @@
-![](https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png)
+<!-- TITLE/ -->
 
-[![Travis branch](https://img.shields.io/travis/pheuter/essential-react.svg?style=flat-square)](https://travis-ci.org/pheuter/essential-react)
-[![Coveralls](https://img.shields.io/coveralls/pheuter/essential-react.svg?style=flat-square)](https://coveralls.io/r/pheuter/essential-react)
-[![David](https://img.shields.io/david/pheuter/essential-react.svg?style=flat-square)](https://david-dm.org/pheuter/essential-react)
-[![npm](https://img.shields.io/npm/v/essential-react.svg?style=flat-square)](https://www.npmjs.com/package/essential-react)
+<h1>minimal-react</h1>
 
----
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-A minimal skeleton for building testable React apps using Babel.
-
-- [Design Goals](#design-goals)
-- [Getting Started](#getting-started)
-- [Commands](#commands)
-  - [server](#server)
-  - [build](#build)
-  - [test](#test)
-  - [coveralls](#coveralls)
-  - [clean](#clean)
-- [Changelog](#changelog)
-
-## Design Goals
-
-- Use fewer tools (no yeoman, gulp, bower, etc...)
-- Babel 6 with Webpack and Hot Loader
-- Fast testing with mocked-out DOM
-- Import css files as class names
-- Separate [Smart and Dumb](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components
-- No specific implementation of Flux or data fetching patterns
+<!-- /TITLE -->
 
 
-## Getting Started
+<!-- BADGES/ -->
 
-```sh
-$ npm install
+<span class="badge-travisci"><a href="http://travis-ci.org/balupton/minimal-react" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/balupton/minimal-react/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-npmversion"><a href="https://npmjs.org/package/minimal-react" title="View this project on NPM"><img src="https://img.shields.io/npm/v/minimal-react.svg" alt="NPM version" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/minimal-react" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/minimal-react.svg" alt="NPM downloads" /></a></span>
+<span class="badge-daviddm"><a href="https://david-dm.org/balupton/minimal-react" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/balupton/minimal-react.svg" alt="Dependency Status" /></a></span>
+<span class="badge-daviddmdev"><a href="https://david-dm.org/balupton/minimal-react#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/balupton/minimal-react.svg" alt="Dev Dependency Status" /></a></span>
+<br class="badge-separator" />
+<span class="badge-slackin"><a href="https://slack.bevry.me" title="Join this project's slack community"><img src="https://slack.bevry.me/badge.svg" alt="Slack community badge" /></a></span>
+<span class="badge-patreon"><a href="http://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-gratipay"><a href="https://www.gratipay.com/bevry" title="Donate weekly to this project using Gratipay"><img src="https://img.shields.io/badge/gratipay-donate-yellow.svg" alt="Gratipay donate button" /></a></span>
+<span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
+<span class="badge-paypal"><a href="https://bevry.me/paypal" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
+<span class="badge-bitcoin"><a href="https://bevry.me/bitcoin" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
+<span class="badge-wishlist"><a href="https://bevry.me/wishlist" title="Buy an item on our wishlist for us"><img src="https://img.shields.io/badge/wishlist-donate-yellow.svg" alt="Wishlist browse button" /></a></span>
+
+<!-- /BADGES -->
+
+
+<!-- DESCRIPTION/ -->
+
+React starter kit that is more minimal than essential
+
+<!-- /DESCRIPTION -->
+
+
+## Usage
+
+``` bash
+# Setup
+git clone https://github.com/balupton/minimal-react.git
+cd minimal-react
+npm install
+
+# Once-off compiles
+npm run-script compile
+
+# Development build
+npm start
+
+# Testing
+npm test
+
+# Updating Meta Files
+npm run-script meta
 ```
 
-Start the local dev server:
+<!-- HISTORY/ -->
 
-```sh
-$ npm run server
-```
+<h2>History</h2>
 
-Navigate to **http://localhost:8080/** to view the app.
+<a href="https://github.com/balupton/minimal-react/blob/master/HISTORY.md#files">Discover the release history by heading on over to the <code>HISTORY.md</code> file.</a>
 
-## Commands
+<!-- /HISTORY -->
 
-A core philosophy of this skeleton app is to keep the tooling to a minimum. For this reason, you can find all the commands in the `scripts` section of [package.json](package.json).
 
-### server
+<!-- LICENSE/ -->
 
-```sh
-$ npm run server
-```
+<h2>License</h2>
 
-**Input:** `src/main.jsx`
+Unless stated otherwise all works are:
 
-This leverages [React Hot Loader](https://github.com/gaearon/react-hot-loader) to automatically start a local dev server and refresh file changes on the fly without reloading the page.
+<ul><li>Copyright &copy; 2016+ <a href="https://balupton.com">Benjamin Lupton</a></li></ul>
 
-It also automatically includes source maps, allowing you to browse code and set breakpoints on the original ES6 code:
+and licensed under:
 
-### build
+<ul><li><a href="http://spdx.org/licenses/Unlicense.html">The Unlicense</a></li></ul>
 
-```sh
-$ npm run build
-```
-
-**Input:** `src/main.jsx`
-
-**Output:** `build/app.js`
-
-Build minified app for production using the [production](http://webpack.github.io/docs/cli.html#production-shortcut-p) shortcut.
-
-### test
-
-```sh
-$ npm test
-```
-
-**Input:** `test/main.js`
-
-**Output:** `coverage/`
-
-Leverages [ava](https://github.com/sindresorhus/ava) to execute the test suite and generate code coverage reports using [nyc](https://github.com/bcoe/nyc)
-
-### coveralls
-
-```sh
-$ npm run coveralls
-```
-
-**Input:** `coverage/lcov.info`
-
-Sends the code coverage report generated by [nyc](https://github.com/bcoe/nyc) to [Coveralls](http://coveralls.io/).
-
-### clean
-
-```sh
-$ npm run clean
-```
-
-**Input:** `build/app.js`
-
-Removes the compiled app file from build.
-
-## [Changelog](CHANGELOG.md)
+<!-- /LICENSE -->
