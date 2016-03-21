@@ -1,5 +1,6 @@
 {
   "name": "minimal-react",
+  "private": true,
   "version": "0.5.0",
   "description": "React starter kit that is more minimal than essential",
   "homepage": "https://github.com/balupton/minimal-react",
@@ -8,7 +9,6 @@
   "badges": {
     "list": [
       "travisci",
-      "npmdownloads",
       "daviddm",
       "daviddmdev",
       "---",

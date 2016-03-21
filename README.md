@@ -8,7 +8,6 @@
 <!-- BADGES/ -->
 
 <span class="badge-travisci"><a href="http://travis-ci.org/balupton/minimal-react" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/balupton/minimal-react/master.svg" alt="Travis CI Build Status" /></a></span>
-<span class="badge-npmdownloads"><a href="https://npmjs.org/package/minimal-react" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/minimal-react.svg" alt="NPM downloads" /></a></span>
 <span class="badge-daviddm"><a href="https://david-dm.org/balupton/minimal-react" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/balupton/minimal-react.svg" alt="Dependency Status" /></a></span>
 <span class="badge-daviddmdev"><a href="https://david-dm.org/balupton/minimal-react#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/balupton/minimal-react.svg" alt="Dev Dependency Status" /></a></span>
 <br class="badge-separator" />
