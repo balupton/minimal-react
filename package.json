@@ -51,7 +51,7 @@
     "url": "http://github.com/balupton/minimal-react.git"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=5"
   },
   "scripts": {
     "clean": "rm build/bundle*",
