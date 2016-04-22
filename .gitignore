@@ -33,4 +33,5 @@ esnext/
 # =====================================
 # CUSTOM
 
-# None
+assets/bundle*
+spec/

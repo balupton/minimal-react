@@ -1,7 +1,5 @@
-const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const join = require('path').join
-const url = 'http://localhost:9090'
+// Imports
+const config = require('./')
 
 /**
  * This is the Webpack configuration file for local development. It contains
@@ -13,32 +11,36 @@ const url = 'http://localhost:9090'
  *
  * For more information, see: http://webpack.github.io/docs/configuration.html
  */
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
+	context: config.rootPath,
+
 	// Efficiently evaluate modules with source maps
 	devtool: 'eval',
 
-	// Set entry point to ./source/index.js and include necessary files for hot load
+	// Set entry point to source script and include necessary files for hot load
 	entry: [
-		`webpack-dev-server/client?${url}`,
+		`webpack-dev-server/client?${config.webpackUrl}`,
 		'webpack/hot/only-dev-server',
-		'./source/index.js'
+		config.sourceScriptPath
 	],
 
 	// This will not actually create a bundle.js file in ./build. It is used
 	// by the dev server for dynamic hot loading.
 	output: {
-		path: join(__dirname, 'build'),
-		filename: 'bundle.js',
-		publicPath: `${url}/build/`
+		path: config.outputPath,
+		filename: config.outputScript,
+		publicPath: `/${config.outputDirectory}`
 	},
 
 	// Necessary plugins for hot load
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
-		new ExtractTextPlugin('bundle.css', {
-            allChunks: true
-        })
+		new ExtractTextPlugin(config.outputStyle, {
+			allChunks: true
+		})
 	],
 
 	// Transform source code using Babel and React Hot Loader

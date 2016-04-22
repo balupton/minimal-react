@@ -1,19 +1,21 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const join = require('path').join
+// Imports
+const config = require('./')
 
 /**
  * This is the Webpack configuration file for production.
  */
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
-	entry: './source/index.js',
+	context: config.rootPath,
+	entry: config.sourceScriptPath,
 
 	output: {
-		path: join(__dirname, 'build'),
-		filename: 'bundle.js'
+		path: config.outputPath,
+		filename: config.outputScript
 	},
 
 	plugins: [
-		new ExtractTextPlugin('bundle.css', {
+		new ExtractTextPlugin(config.outputStyle, {
 			allChunks: true
 		})
 	],
