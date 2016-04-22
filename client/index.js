@@ -4,7 +4,7 @@ import 'babel-polyfill'
 // Libraries
 import React from 'react'
 import ReactDOM from 'react-dom'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+// import createBrowserHistory from 'history/lib/createBrowserHistory'
 
 // ID of the DOM element to mount app on
 const DOM_APP_EL_ID = 'app'

@@ -11,26 +11,26 @@ const app = express()
 // Routes
 
 // Serve application file depending on environment
-app.get(`/${config.outputScript}`, function (req, res) {
+app.get(`/${config.assetsScript}`, function (req, res) {
 	// Send generated file
     if ( config.production ) {
-        res.sendFile(config.outputScriptPath)
+        res.sendFile(config.assetsScriptPath)
     }
 	// Redirect to webpack development server
     else {
-        res.redirect(`${config.webpackUrl}/${config.outputDirectory}/${config.outputScript}`)
+        res.redirect(`${config.webpackUrl}/${config.assetsDirectory}/${config.assetsScript}`)
     }
 })
 
 // Serve aggregate stylesheet depending on environment
-app.get(`/${config.outputStyle}`, function (req, res) {
+app.get(`/${config.assetsStyle}`, function (req, res) {
 	// Send generated file
     if ( config.production ) {
-        res.sendFile(config.outputStylePath)
+        res.sendFile(config.assetsStylePath)
     }
 	// Redirect to webpack development server
     else {
-        res.redirect(`${config.webpackUrl}/${config.outputDirectory}/${config.outputStyle}`)
+        res.redirect(`${config.webpackUrl}/${config.assetsDirectory}/${config.assetsStyle}`)
     }
 })
 
@@ -58,7 +58,7 @@ if ( config.development ) {
         publicPath: webpackConfig.output.publicPath,
         hot: true,
         noInfo: true,
-        historyApiFallback: true
+        // historyApiFallback: true
     }).listen(config.webpackPort, config.webpackHostname, function (err) {
         if (err)  return console.error(err)
     })

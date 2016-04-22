@@ -23,22 +23,22 @@ module.exports = {
 	entry: [
 		`webpack-dev-server/client?${config.webpackUrl}`,
 		'webpack/hot/only-dev-server',
-		config.sourceScriptPath
+		`./${config.sourceDirectory}/${config.sourceScript}`
 	],
 
 	// This will not actually create a bundle.js file in ./build. It is used
 	// by the dev server for dynamic hot loading.
 	output: {
-		path: config.outputPath,
-		filename: config.outputScript,
-		publicPath: `/${config.outputDirectory}`
+		path: config.assetsPath,
+		filename: config.assetsScript,
+		publicPath: `${config.webpackUrl}/${config.assetsDirectory}/`
 	},
 
 	// Necessary plugins for hot load
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
-		new ExtractTextPlugin(config.outputStyle, {
+		new ExtractTextPlugin(config.assetsStyle, {
 			allChunks: true
 		})
 	],

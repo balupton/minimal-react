@@ -7,15 +7,15 @@ const config = require('./')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
 	context: config.rootPath,
-	entry: config.sourceScriptPath,
+	entry: `./${config.sourceDirectory}/${config.sourceScript}`,
 
 	output: {
-		path: config.outputPath,
-		filename: config.outputScript
+		path: config.assetsPath,
+		filename: config.assetsScript
 	},
 
 	plugins: [
-		new ExtractTextPlugin(config.outputStyle, {
+		new ExtractTextPlugin(config.assetsStyle, {
 			allChunks: true
 		})
 	],
