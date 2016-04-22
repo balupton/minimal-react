@@ -55,7 +55,7 @@
   },
   "scripts": {
     "clean": "rm build/bundle*",
-    "start": "node ./server.js",
+    "start": "node --harmony_destructuring ./server.js",
     "compile": "npm run compile:webpack",
     "compile:webpack": "webpack -p --progress --config ./webpack.production.config.js",
     "meta": "npm run meta:projectz",
