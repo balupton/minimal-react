@@ -2,7 +2,7 @@ import test from 'ava'
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import App from '../source/app.js'
+import App from '../client/app.js'
 
 test('render with container div', (t) => {
     const wrapper = shallow(React.createElement(App))
