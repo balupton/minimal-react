@@ -54,7 +54,7 @@
     "node": ">=5"
   },
   "scripts": {
-    "clean": "rm build/bundle*",
+    "clean": "rm assets/bundle*",
     "start": "node --harmony_destructuring ./server/index.js",
     "compile": "npm run compile:webpack",
     "compile:webpack": "webpack -p --progress --config ./config/webpack.production.js",
